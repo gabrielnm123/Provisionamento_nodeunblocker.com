@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Dependências iniciais
-sudo apt update && sudo apt install -y curl git
+sudo apt update && sudo apt install -y curl wget unzip
 
 # instalando o ultimo release do nvm
 release=$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | grep "tag_name" | cut -d '"' -f 4) # retornar a ultima versão e quarda na variaval
@@ -12,10 +12,12 @@ nvm install --lts
 nvm list
 
 # Clonando o repositorio do nodeunblocker.com
-git clone git@github.com:nfriedly/nodeunblocker.com.git
+wget https://github.com/nfriedly/nodeunblocker.com/archive/refs/heads/master.zip
+unzip master.zip
+rm master.zip
 
 # Movendo-se para o diretorio
-cd nodeunblocker.com
+cd nodeunblocker.com-master
 
 # Instalando as dependências do repositorio
 npm install
