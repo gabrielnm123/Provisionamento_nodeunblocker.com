@@ -5,7 +5,7 @@ sudo apt update && sudo apt install -y curl git
 
 # instalando o ultimo release do nvm
 release=$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | grep "tag_name" | cut -d '"' -f 4) # retornar a ultima versão e quarda na variaval
-curl -fsSLO https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh && bash install.sh
+curl -fsSLO "https://raw.githubusercontent.com/nvm-sh/nvm/$release/install.sh" && bash install.sh
 
 # Instalando node.js lts
 nvm install --lts
