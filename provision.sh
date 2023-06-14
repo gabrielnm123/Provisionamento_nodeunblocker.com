@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Dependências iniciais
-apt update && apt install -y wget curl unzip npm
+sudo apt update && sudo apt install -y wget curl unzip npm
 
 # instalando o ultimo release do nvm
 release=$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | grep "tag_name" | cut -d '"' -f 4) # retornar a ultima versão e quarda na variaval
