@@ -14,6 +14,6 @@ Aqui tem um provisinamento de um Proxy Web chamado nodeunblocker.com
 ## Instalação automática
 
 ``` bash
-wget https://github.com/gabrielnm123/Provisionamento_nodeunblocker.com/raw/main/provision.sh && bash provision.sh
+wget https://github.com/gabrielnm123/Provisionamento_nodeunblocker.com/raw/main/provision.sh && sudo ./provision.sh
 rm provision.sh
 ```
